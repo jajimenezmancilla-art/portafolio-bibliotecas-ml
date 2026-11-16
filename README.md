@@ -19,6 +19,23 @@ Predice el total mensual de préstamos y detecta caídas anómalas en la serie.
 - `src/modelos.py`: los modelos base, la evaluación (holdout y ventana móvil) y la validación cruzada.
 - `src/red_neuronal.py`: red densa en Keras.
 
+## App interactiva (Streamlit)
+
+Desde la raíz del proyecto, con el venv activado:
+
+```
+streamlit run app.py
+```
+
+La app muestra la serie mensual completa con las dos caídas anómalas
+sombreadas, un selector para comparar los seis modelos (real frente a
+predicho en los últimos 12 meses, con MAE y RMSE) y la tabla comparativa
+de holdout y ventana móvil. Los modelos se entrenan una sola vez por
+proceso: la primera carga tarda unos 6 minutos por la red neuronal y después
+los cambios de selector son inmediatos.
+
+[CAPTURA AQUÍ]
+
 ## Hallazgo 1: dos caídas anómalas en la serie mensual
 
 La serie de préstamos totales (enero 2015 a agosto 2026) tiene una tendencia
