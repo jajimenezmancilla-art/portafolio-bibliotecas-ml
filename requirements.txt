@@ -85,6 +85,7 @@ pandas==3.1.1
 pandocfilters==1.5.1
 parso==0.8.7
 pillow==13.0.0
+pip_system_certs==5.3
 platformdirs==4.14.5
 prometheus_client==0.26.0
 prompt_toolkit==3.0.53
